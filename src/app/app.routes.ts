@@ -19,13 +19,13 @@ export const routes: Routes = [
         component: LayoutComponent,
         children: [
            { path: 'dashboard',
-            component: DashboardComponent},
+            component:DashboardComponent},
 
             { path: 'customer',
-                component: CustomerComponent},
+                component:CustomerComponent},
 
                 { path: 'vehicle',
-                    component: VehicleComponent},
+                    component:VehicleComponent},
 
                     { path: 'booking',
                         component:BookingComponent},
