@@ -1,6 +1,10 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BookingComponent } from './components/booking/booking.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { LoginComponent } from './components/login/login.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
 
 export const routes: Routes = [
 
@@ -15,20 +19,28 @@ export const routes: Routes = [
     },
 
     {
-        path: '',
+        path: 'layout',
         component: LayoutComponent,
         children: [
-           { path: 'dashboard',
-            component:DashboardComponent},
+           { 
+            path: 'dashboard',
+            component:DashboardComponent
+        },
 
-            { path: 'customer',
-                component:CustomerComponent},
+            {
+               path: 'customer',    
+                component:CustomerComponent
+            },
 
-                { path: 'vehicle',
-                    component:VehicleComponent},
+                { 
+                    path: 'vehicle',
+                    component:VehiclesComponent
+                },
 
-                    { path: 'booking',
-                        component:BookingComponent},
+                    { 
+                        path: 'booking',
+                        component:BookingComponent
+                    },
          ]
 
     }
